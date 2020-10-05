@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <!--<q-header elevated>
       <q-toolbar>
         <q-btn
           flat
@@ -17,7 +17,7 @@
 
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
-    </q-header>
+    </q-header>-->
 
     <q-drawer
       v-model="leftDrawerOpen"
@@ -41,7 +41,11 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <app-root>
+        <div class="app-wrapper">
+          <router-view />
+        </div>
+      </app-root>
     </q-page-container>
   </q-layout>
 </template>
@@ -105,3 +109,17 @@ export default {
   }
 }
 </script>
+<style>
+  .app-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #F3F3F6;
+  }
+  .q-page-container{
+    --q-color-primary: #eab354;
+  }
+</style>
+
+<!--DOTO:: PUT COMMON STYLES SOMETHERE IN COMMON PLACE -->
