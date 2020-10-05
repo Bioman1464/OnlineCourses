@@ -13,8 +13,8 @@
         </main>
       </q-page-container>
       <app-auth-footer class="auth-footer">
-        У вас уже есть аккаунт?&nbsp;
-        <a class="link" href="/auth/registration" routerlink="/auth/registration"> Зарегистрируйтесь </a>
+        {{$route.meta.footer_link_title}}&nbsp;
+        <router-link class="link" :to="$route.meta.footer_link"> {{$route.meta.footer_link_name}} </router-link>
       </app-auth-footer>
     </app-auth>
   </q-layout>
@@ -108,5 +108,58 @@ export default {
   }
   .sb-link{
     transition: all 0.3s;
+  }
+  app-auth-card{
+    min-height: 460px;
+    padding: 52px 76px 36px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  .auth-card-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    padding-top: 36px;
+    color: #b4b9cb;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .auth-h2{
+    font-size:20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    margin-top: 0;
+    margin-bottom: .5rem;
+  }
+  .auth-card-header{
+    margin-bottom: 36px;
+  }
+  .auth-card-content{
+  }
+  .auth-card-in-field{
+    /*--q-color-primary: #c3c6cb;*/
+  }
+  .auth-card-in-field-margin{
+    margin-top: 30px;
+  }
+  .auth-card-btn{
+    margin-top: 100px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    min-height: 40px;
+  }
+  .auth-card-btn:disabled{
+    --q-color-primary: #c3c6cb;
   }
 </style>
