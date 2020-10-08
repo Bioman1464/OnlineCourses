@@ -1,15 +1,15 @@
 <template>
-  <app-auth-register>
-    <app-auth-card>
+  <div class="app-auth-registration">
+    <div class="app-auth-card">
       <header class="auth-card-header">
         <h2 class="auth-h2">
-          <app-auth-card-title>
+          <div class="app-auth-card-title">
             Зарегистрируйтесь в M&M's
-          </app-auth-card-title>
+          </div>
         </h2>
       </header>
       <main class="auth-card-content">
-        <app-auth-card-content>
+        <div class="app-auth-card-content">
           <q-input class="auth-card-in-field auth-card-in-field-margin"
                    v-model="text" label="Имя" :dense="true"/>
           <q-input class="auth-card-in-field auth-card-in-field-margin"
@@ -23,10 +23,10 @@
           </div>
           <q-btn class="auth-card-btn" unelevated color="primary"
                  label="Зарегистрироваться" no-caps/>
-        </app-auth-card-content>
+        </div>
       </main>
-    </app-auth-card>
-  </app-auth-register>
+    </div>
+  </div>
 </template>
 
 <script>

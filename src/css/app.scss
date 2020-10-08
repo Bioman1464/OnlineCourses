@@ -2,3 +2,31 @@
 .q-checkbox__label{
   padding-top: 20px;
 }
+
+body{
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: $white;
+  margin: 0;
+  position: relative;
+  text-rendering: optimizeLegibility;
+}
+
+body, html{
+  height: 100vh;
+  overflow: hidden;
+}
+header, main{
+  display: block;
+}
+
+a.link{
+  color: $black;
+  transition: border-bottom-color 0.3s;
+  font-weight: 700;
+  border-bottom: 2px solid $mainYellow;
+  text-decoration: none;
+}

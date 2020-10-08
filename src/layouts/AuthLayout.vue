@@ -1,6 +1,6 @@
 <template>
   <q-layout>
-    <app-auth class="app-auth">
+    <div class="app-auth">
       <header class="auth-header">
         <img
           class="auth-header-logo"
@@ -12,11 +12,13 @@
           <router-view/>
         </main>
       </q-page-container>
-      <app-auth-footer class="auth-footer">
+      <div class="auth-footer">
         {{$route.meta.footer_link_title}}&nbsp;
-        <router-link class="link" :to="$route.meta.footer_link"> {{$route.meta.footer_link_name}} </router-link>
-      </app-auth-footer>
-    </app-auth>
+        <router-link class="link" :to="$route.meta.footer_link">
+          {{$route.meta.footer_link_name}}
+        </router-link>
+      </div>
+    </div>
   </q-layout>
 </template>
 
@@ -58,14 +60,8 @@ export default {
     width: 496px;
     display: block;
   }
-  app-auth-registration{
+  .app-auth-registration{
     background-color: #e7e4e3;
-  }
-  app-auth-card{
-    min-height: 460px;
-    padding: 52px 76px 36px 76px;
-    display: flex;
-    background-color: #FFFFFF;
   }
   .auth-footer{
     display: flex;
@@ -77,31 +73,6 @@ export default {
     font-weight: 400;
     line-height: 20px;
   }
-  a.link{
-    color: #000000;
-    transition: border-bottom-color 0.3s;
-    font-weight: 700;
-    border-bottom: 2px solid #eab354;
-    text-decoration: none;
-  }
-  body{
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-    margin: 0;
-    position: relative;
-    text-rendering: optimizeLegibility;
-  }
-  body, html{
-    height: 100vh;
-    overflow: hidden;
-  }
-  header, main{
-    display: block;
-  }
   .sb-link, .sb-link:active, .sb-link:hover{
     color: inherit;
     text-decoration: none;
@@ -109,12 +80,12 @@ export default {
   .sb-link{
     transition: all 0.3s;
   }
-  app-auth-card{
+  .app-auth-card{
     min-height: 460px;
     padding: 52px 76px 36px;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #FFFFFF;
   }
   .auth-card-footer{
     display: flex;
@@ -160,6 +131,6 @@ export default {
     min-height: 40px;
   }
   .auth-card-btn:disabled{
-    --q-color-primary: #c3c6cb;
+    --q-color-primary: #C3C6CB;
   }
 </style>
