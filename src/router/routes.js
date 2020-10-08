@@ -11,7 +11,7 @@ const routes = [
         children: [
           {
             path: 'sign-in',
-            component: () => import('pages/SignIn.vue'),
+            component: () => import('pages/Auth/SignIn.vue'),
             name: 'login',
             meta: {
               footer_link_title: 'Новый пользователь?',
@@ -23,7 +23,7 @@ const routes = [
           },
           {
             path: 'registration',
-            component: () => import('pages/Registration.vue'),
+            component: () => import('pages/Auth/Registration.vue'),
             name: 'register',
             meta: {
               footer_link_title: 'У вас уже есть аккаунт?',
