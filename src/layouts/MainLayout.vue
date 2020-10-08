@@ -41,11 +41,11 @@
     </q-drawer>
 
     <q-page-container>
-      <app-root>
+      <div>
         <div class="app-wrapper">
           <router-view />
         </div>
-      </app-root>
+      </div>
     </q-page-container>
   </q-layout>
 </template>
@@ -121,5 +121,3 @@ export default {
     --q-color-primary: #eab354;
   }
 </style>
-
-<!--DOTO:: PUT COMMON STYLES SOMETHERE IN COMMON PLACE -->

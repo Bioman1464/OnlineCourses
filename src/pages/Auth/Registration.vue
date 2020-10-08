@@ -4,7 +4,7 @@
       <header class="auth-card-header">
         <h2 class="auth-h2">
           <div class="app-auth-card-title">
-            Зарегистрируйтесь в M&M's
+            Зарегистрируйтесь
           </div>
         </h2>
       </header>
@@ -25,7 +25,7 @@
             v-model="last_name"
             label="Фамилия" :dense="true"
             type="text"
-            aria-placeholder="Введите фамилию"
+            placeholder="Введите фамилию"
             stack-label
             :rules="[() => $v.last_name.required || 'Обязательное поле!']"
             @input="$v.last_name.$touch()"
@@ -35,7 +35,7 @@
             v-model="email"
             label="Email" :dense="true"
             type="email"
-            aria-placeholder="Введите e-mail"
+            placeholder="Введите e-mail"
             stack-label
             :rules="[
               () => $v.email.required || 'Обязательное поле!',
@@ -48,7 +48,7 @@
             v-model="password"
             label="Пароль" :dense="true"
             type="password"
-            aria-placeholder="Введите пароль"
+            placeholder="Введите пароль"
             stack-label
             :rules="[
               () => $v.password.required || 'Обязательное поле!',
@@ -56,11 +56,11 @@
             ]"
             @input="$v.password.$touch()"
           />
-          <div class="auth-card-checkbox">
+          <!--<div class="auth-card-checkbox">
             <div class="q-gutter-sm">
               <q-checkbox class="auth-reg-checkbox-item" v-model="rules_of_perm" label="Я согласен с условиями обратоки персональных данных" />
             </div>
-          </div>
+          </div>-->
           <q-btn
             class="auth-card-btn" unelevated color="primary"
             label="Зарегистрироваться" no-caps
@@ -89,12 +89,12 @@ export default {
   }),
   methods: {
     ...mapActions({
-      signUp: 'Auth'
+      signUp: 'Auth/signUp'
     }),
     handleSubmit () {
       this.signUp({ ...this.$data })
         .then(() => {
-          this.$router.push({ name: 'auth-login' })
+          this.$router.push({ name: 'Auth-login' })
         })
         .catch((errors) => {
           console.log(errors)

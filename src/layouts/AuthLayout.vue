@@ -2,10 +2,11 @@
   <q-layout>
     <div class="app-auth">
       <header class="auth-header">
-        <img
+        <!--<img
           class="auth-header-logo"
           src="~assets/skillbox.svg"
-          alt="Company Logo">
+          alt="Company Logo">-->
+        Плтаформа онлайн-образования
       </header>
       <q-page-container>
         <main class="auth-content">

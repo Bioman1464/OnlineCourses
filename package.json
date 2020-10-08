@@ -13,7 +13,11 @@
     "@quasar/extras": "^1.0.0",
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
+    "lodash": "^4.17.20",
     "quasar": "^1.0.0",
+    "vue": "^2.6.12",
+    "vue-axios": "^3.0.1",
+    "vue-router": "^3.4.6",
     "vuelidate": "^0.7.5"
   },
   "devDependencies": {
