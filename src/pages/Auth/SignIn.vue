@@ -21,9 +21,6 @@
             type="password"
             label="Пароль" :dense="true"
             color="gray"
-            :rules="[
-              () => $v.password.required
-            ]"
             @input="$v.password.$touch()"
           />
           <q-btn

@@ -56,13 +56,9 @@
             ]"
             @input="$v.password.$touch()"
           />
-          <!--<div class="auth-card-checkbox">
-            <div class="q-gutter-sm">
-              <q-checkbox class="auth-reg-checkbox-item" v-model="rules_of_perm" label="Я согласен с условиями обратоки персональных данных" />
-            </div>
-          </div>-->
           <q-btn
-            class="auth-card-btn" unelevated color="primary"
+            class="auth-card-btn" unelevated
+            color="primary"
             label="Зарегистрироваться" no-caps
             :disable="this.$v.$anyError"
             @click="handleSubmit"
@@ -79,7 +75,6 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'register',
-  rules_of_perm: false,
   data: () => ({
     first_name: '',
     last_name: '',
@@ -122,7 +117,7 @@ export default {
 
 <style scoped>
 .auth-card-btn{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .auth-card-checkbox{
   margin-top: 10px;
