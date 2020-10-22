@@ -67,8 +67,8 @@ export default {
   .auth-footer{
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-    margin-bottom: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
